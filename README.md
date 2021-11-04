@@ -94,10 +94,12 @@ Atividades:
 }
 
 # --> Consulta todos os documentos
-## db.getCollection('JAVA').find()
+## 
+db.getCollection('JAVA').find()
 
 # --> Consulta por field específica 
-##db.getCollection('JAVA').find({"aluno.nome":"fernanda" })
+##
+db.getCollection('JAVA').find({"aluno.nome":"fernanda" })
 
 # --> Update na field (nome.aluno)
 ##
@@ -120,25 +122,32 @@ db.getCollection('JAVA').update(
 );
 
 # --> Remover / excluir um documents
-## db.getCollection('JAVA').remove({ "aluno.nome":"fernanda" });
+## 
+db.getCollection('JAVA').remove({ "aluno.nome":"fernanda" });
 
 
 # --> Consulta por projeção
-## db.getCollection('JAVA').find({}, {"aprovacao" : 1 , "_id" : 0 })
+## 
+db.getCollection('JAVA').find({}, {"aprovacao" : 1 , "_id" : 0 })
 
 # --> Consulta utilizando selectores
-## db.getCollection('JAVA').find({$or: [ { "aluno.nome": /.*fernan.*/ , "aprovacao":"aprovado" } ]})
+## 
+db.getCollection('JAVA').find({$or: [ { "aluno.nome": /.*fernan.*/ , "aprovacao":"aprovado" } ]})
 
 # --> Consulta paginada e ordenada (ignorar)
-## db.getCollection('JAVA').find({}).skip(1)
+## 
+db.getCollection('JAVA').find({}).skip(1)
 
 # --> Consulta paginada e ordenada (classificar - ordem decrescente)
-## db.getCollection('JAVA').find().sort( { "nota final": -1 } )
+## 
+db.getCollection('JAVA').find().sort( { "nota final": -1 } )
 
 # --> Consulta paginada e ordenada (classificar - ordem crescente)
-## db.getCollection('JAVA').find().sort( { "nota final": 1 } )
+## 
+db.getCollection('JAVA').find().sort( { "nota final": 1 } )
 
 # --> Consulta paginada e ordenada (limitar)
-## db.getCollection('JAVA').aggregate([{ $limit:2}])
+## 
+db.getCollection('JAVA').aggregate([{ $limit:2}])
 
-# Sempre avante! Confia!!! 🚀🚀🚀🚀
+## Sempre avante! Confia!!! 🚀🚀🚀🚀
